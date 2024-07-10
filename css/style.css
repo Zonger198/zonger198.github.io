@@ -1,3 +1,79 @@
+/* Переменные*/
+:root {
+    --color-darkgreen:#07373a;
+    --color-green: #0B5056;
+    --background-greencolor: rgb(0, 0, 0, 15%)
+}
+
+
+/* Общие стили */
+
+a{
+    color: rgb(6, 54, 46);
+    text-decoration: none;
+    transition: opacity .25s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/*header стили*/
+
 .header {
-    height: 100vh;
+    height: 110vh;
+    background: url("../images/green2.jpg") no-repeat center;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0%, 100% 79%, 50% 100%, 0 79%);
+}
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    height: 80px;
+
+    color: var(--color-darkgreen);
+    background: var(--background-greencolor);
+}
+
+.header-top a {
+    color: var(--color-darkgreen);;
+}
+
+.header-top a.active {
+    color:rgb(207, 219, 207);
+}
+
+.logo {
+    font-size: 36px;
+}
+
+
+.menu {
+    display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.menu-element{
+    margin-right: 25px;
+    list-style-type: none;
+    font-size: 22px;
+}
+
+.menu-element :last-child {
+    margin-right: 0;
+}
+
+.header-center {
+    color: var(--color-green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+}
+.name {
+
 }
