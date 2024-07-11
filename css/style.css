@@ -74,6 +74,18 @@ a:hover {
     justify-content: center;
     height: calc(100vh - 80px);
 }
-.name {
 
+.header-center__wrapper{
+    width: 100%;
+    background: rgb(0, 0, 0, 5%);
+    text-align: center;
+    padding: 20px 0;
+}
+.name {
+    font-size: 58px;
+    line-height: 74px;
+}
+
+.description{
+    font-size: 22px;
 }
