@@ -8,13 +8,13 @@
 
 /* Общие стили */
 
-a{
+a.link {
     color: rgb(6, 54, 46);
     text-decoration: none;
     transition: opacity .25s ease;
 }
 
-a:hover {
+a.link:hover {
     opacity: 0.7;
 }
 
@@ -27,6 +27,8 @@ a:hover {
     clip-path: polygon(0 0, 100% 0%, 100% 79%, 50% 100%, 0 79%);
 }
 .header-top {
+    position: sticky;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -34,16 +36,15 @@ a:hover {
     height: 80px;
 
     color: var(--color-darkgreen);
-    background: var(--background-greencolor);
+    background: #10a3ad;
+    z-index: 2;
 }
 
-.header-top a {
+.header-top a.link {
     color: var(--color-darkgreen);;
 }
 
-.header-top a.active {
-    color:rgb(207, 219, 207);
-}
+
 
 .logo {
     font-size: 36px;
@@ -57,7 +58,7 @@ a:hover {
 }
 
 .menu-element{
-    margin-right: 25px;
+    margin-right: 30px;
     list-style-type: none;
     font-size: 22px;
 }
@@ -66,13 +67,19 @@ a:hover {
     margin-right: 0;
 }
 
+.menu-element a.link.active, .menu-element a.link:hover {
+    color: rgb(207, 219, 207);
+}
+
 .header-center {
+    position: relative;
     color: var(--color-green);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: calc(100vh - 80px);
+    z-index: 2;
 }
 
 .header-center__wrapper{
@@ -87,5 +94,33 @@ a:hover {
 }
 
 .description{
+    display: inline-block;
     font-size: 22px;
+    line-height: 1,5em;
+    font-family: Courier, monospace;
+    width: 121ch;
+    white-space: nowrap;
+
+    border-right: 2px solid transparent;
+    overflow: hidden;
+    animation: cursor 0.75s 8, print-text 5s;
+}
+
+@keyframes cursor {
+    0% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #07373a;
+    }
+    100% {
+        border-color: transparent;
+    }
+
+}
+
+@keyframes print-text {
+    from {
+        width: 0;
+    }
 }
