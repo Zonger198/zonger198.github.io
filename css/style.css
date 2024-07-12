@@ -2,20 +2,9 @@
 :root {
     --color-darkgreen:#07373a;
     --color-green: #0B5056;
-    --background-greencolor: rgb(0, 0, 0, 15%)
-}
-
-
-/* Общие стили */
-
-a.link {
-    color: rgb(6, 54, 46);
-    text-decoration: none;
-    transition: opacity .25s ease;
-}
-
-a.link:hover {
-    opacity: 0.7;
+    --background-greencolor: rgb(0, 0, 0, 15%);
+    --color-text: #585858;
+    --color-gray: #a8a8a8;
 }
 
 /*header стили*/
@@ -122,4 +111,53 @@ a.link:hover {
     from {
         width: 0;
     }
+}
+
+
+/* Секция обо мне*/
+
+.about-me{
+    display: flex;
+}
+
+.about-me .left{
+    flex: 1 1 40%;
+    padding-right: 40px;
+}
+
+.about-me .right {
+    flex: 1 1 60%;
+}
+
+.about-me__image {
+    width: 350px;
+    margin-left: auto;
+    border-radius: 10px;
+    filter: drop-shadow(10px 10px 10px rgb(0, 0, 0, 50%));
+}
+
+.about-me__title {
+    font-size: 38px;
+}
+
+.about-me__description {
+    font-size: 20px;
+    color: var(--color-text);
+    margin-bottom: 15px;
+}
+
+/* Общие стили */
+
+a.link {
+    color: rgb(13, 128, 108);
+    text-decoration: none;
+    transition: opacity .25s ease;
+}
+
+a.link:hover {
+    opacity: 0.7;
+}
+
+.gray {
+    color: var(--color-gray);
 }
