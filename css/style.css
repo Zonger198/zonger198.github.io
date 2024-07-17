@@ -265,6 +265,7 @@ a.link:hover {
 
 /* Слайдер изображений */
 .slider {
+    position: relative;
     display: flex;
     max-width: 100%;
     overflow: hidden;
@@ -284,4 +285,33 @@ a.link:hover {
 .slider__image {
     width: 100%;
     max-width: 250px;
+}
+
+.slider__input {
+    display: none;
+}
+
+.slider__controls {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.slider__controls-element {
+    display: inline-block;
+    width: 40px;
+    height: 8px;
+    border-radius: 8px;
+    background: rgb(0, 0, 0, 30%);
+
+    cursor: pointer;
+    transition: all .25s ease;
+}
+
+.slider__controls-element:hover {
+    border-color: rgb(0, 0, 0, 50%);
+    background: var(--color-green);
 }
