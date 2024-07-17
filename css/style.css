@@ -268,7 +268,8 @@ a.link:hover {
     position: relative;
     display: flex;
     max-width: 100%;
-    overflow: hidden;
+    height: auto;
+    overflow-x: hidden;
 }
 
 .slider__wrapper {
