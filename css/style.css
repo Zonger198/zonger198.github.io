@@ -6,6 +6,8 @@
     --color-text: #585858;
     --color-gray: #a8a8a8;
     --color-text-black: #262626;
+
+    --background-grey: #eeeeee;
 }
 
 /*header стили*/
@@ -120,6 +122,7 @@
 .about-me{
     display: flex;
     align-items: center;
+    padding-bottom: 60px;
 }
 
 .about-me .left{
@@ -179,6 +182,36 @@
     margin-right: 10px;
 }
 
+/* Секция достижения */
+
+.achievements {
+    flex-direction: column;
+    padding: 40px 0;
+    position: relative;
+}
+.achievements:before,
+.achievements:after {
+    content: "";
+    position: absolute;
+    border: 80px solid transparent;
+}
+
+.achievements:before {
+    border-top: 30px solid #fff;
+    top: 0;
+}
+
+.achievements:after {
+    border-top: 30px solid var(--background-grey);
+    bottom: -110px;
+}
+
+
+/* Секция цены на услуги */
+.price {
+    padding: 60px 0 40px;
+}
+
 
 /* Общие стили */
 
@@ -199,4 +232,56 @@ a.link:hover {
 .bold {
     font-weight: 700;
     color: var(--color-text-black);
+}
+
+.second-title{
+    position:relative;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.section-grey {
+    background: var(--background-grey);
+}
+
+.second-title:after{
+    content: "";
+    display: inline-block;
+    width: 60px;
+    height: 2px;
+    background: var(--color-green);
+    position: absolute;
+    bottom: -4px;
+    left: calc(50% - 60px / 2);
+}
+
+.block-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Слайдер изображений */
+.slider {
+    display: flex;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.slider__wrapper {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+}
+
+.slider__link {
+    flex: 1 1 33%;
+}
+
+.slider__image {
+    width: 100%;
+    max-width: 250px;
 }
