@@ -277,6 +277,8 @@ a.link:hover {
     display: flex;
     justify-content: space-between;
     min-width: 100%;
+
+    transition: all .5s ease;
 }
 
 .slider__link {
@@ -315,4 +317,32 @@ a.link:hover {
 .slider__controls-element:hover {
     border-color: rgb(0, 0, 0, 50%);
     background: var(--color-green);
+}
+
+.slider__input:first-of-type:checked ~ .slider__wrapper:first-of-type {
+    margin-left: 0;
+}
+
+.slider__input:nth-of-type(2):checked ~ .slider__wrapper:first-of-type {
+    margin-left: -100%;
+}
+
+.slider__input:nth-of-type(3):checked ~ .slider__wrapper:first-of-type {
+    margin-left: -200%;
+}
+
+.slider__input:nth-of-type(4):checked ~ .slider__wrapper:first-of-type {
+    margin-left: -300%;
+}
+
+.slider__input:nth-of-type(5):checked ~ .slider__wrapper:first-of-type {
+    margin-left: -400%;
+}
+
+.slider__input:nth-of-type(6):checked ~ .slider__wrapper:first-of-type {
+    margin-left: -500%;
+}
+
+.slider__input:nth-of-type(7):checked ~ .slider__wrapper:first-of-type {
+    margin-left: -600%;
 }
