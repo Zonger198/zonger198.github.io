@@ -212,6 +212,60 @@
     padding: 60px 0 40px;
 }
 
+.pricelabel {
+    flex: 1 1 30%;
+    padding-right: 40%;
+}
+
+.price-list__element {
+        list-style: none;
+        padding: 0;
+        border: 1px solid rgba(201, 201, 201, 0.2);
+        background: rgb(224, 224, 224);
+}
+
+.firstlabel {
+    overflow: hidden;
+    padding: 6px 10px;
+    font-size: 20px;
+}
+
+.sublabels {
+    overflow: hidden;
+    padding: 6px 10px;
+    font-size: 20px;
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+    text-align: -webkit-match-parent;
+}
+
+.sublabels span {
+    float: left;
+    width: 75%;
+    color: #7C7D7F;
+}
+
+.sublabels em {
+    font-style: italic;
+}
+
+.firstlabel:first-child {
+    font-weight: bold;
+    padding: 15px 0 10px 15px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: var(--color-green);
+    font-size: 24px;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .2);
+}
+
+.firstlabel:first-child::before {
+    content: "\2749";
+    margin-right: 10px;
+}
 
 /* Общие стили */
 
