@@ -18,6 +18,16 @@
     background-size: cover;
     clip-path: polygon(0 0, 100% 0%, 100% 79%, 50% 100%, 0 79%);
 }
+
+
+.menu-hamburger {
+    display: none;
+}
+
+.checkbox {
+    display: none;
+}
+
 .header-top {
     position: sticky;
     top: 0;
@@ -42,6 +52,10 @@
     font-size: 36px;
 }
 
+.menu-element__link.home svg{
+    height: 35px;
+    width: 35px;
+}
 
 .menu {
     display: flex;
@@ -60,7 +74,7 @@
 }
 
 .menu-element a.link.active, .menu-element a.link:hover {
-    color: rgb(207, 219, 207);
+    color: var(--color-green);
 }
 
 .header-center {
@@ -89,10 +103,9 @@
     display: inline-block;
     font-size: 22px;
     line-height: 1,5em;
-    width: 121ch;
+    width: 100%;
     white-space: nowrap;
-
-    border-right: 2px solid transparent;
+    border-right: 3px solid transparent;
     overflow: hidden;
     animation: cursor 0.75s 8, print-text 9s;
 }
@@ -144,6 +157,7 @@
 
 .about-me__title {
     font-size: 38px;
+    margin-top: 80px;
 }
 
 .about-me__description {
@@ -182,6 +196,10 @@
     margin-right: 10px;
 }
 
+.tel {
+    margin-left: 107px;
+}
+
 /* Секция достижения */
 
 .achievements {
@@ -214,14 +232,15 @@
 
 .pricelabel {
     flex: 1 1 30%;
-    padding-right: 40%;
+    padding-right: 23%;
+    margin-left: 23%;
 }
 
 .price-list__element {
         list-style: none;
         padding: 0;
         border: 1px solid rgba(201, 201, 201, 0.2);
-        background: rgb(224, 224, 224);
+        background: var(--background-grey);
 }
 
 .firstlabel {
@@ -243,7 +262,7 @@
 .sublabels span {
     float: left;
     width: 75%;
-    color: #7C7D7F;
+    color: #000000;
 }
 
 .sublabels em {
@@ -293,6 +312,7 @@ a.link:hover {
     font-size: 28px;
     text-align: center;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 
@@ -317,6 +337,30 @@ a.link:hover {
     justify-content: center;
 }
 
+/*Подвал сайта*/
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 20px 0;
+
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.social-element__link {
+    width: 48px;
+    height: 48px;
+}
+
+.footer-about {
+    color: var(--color-darkgreen);
+}
+
 /* Слайдер изображений */
 .slider {
     position: relative;
@@ -324,6 +368,7 @@ a.link:hover {
     max-width: 100%;
     height: auto;
     overflow-x: hidden;
+    padding-bottom: 50px;
 }
 
 .slider__wrapper {
@@ -350,11 +395,12 @@ a.link:hover {
 
 .slider__controls {
     position: absolute;
-    bottom: 20px;
+    bottom: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
+    width: 100%;
 }
 
 .slider__controls-element {
@@ -368,7 +414,14 @@ a.link:hover {
     transition: all .25s ease;
 }
 
-.slider__controls-element:hover {
+.slider__controls-element:hover, 
+.slider__input:first-of-type:checked ~ .slider__controls .slider__controls-element:first-of-type,
+.slider__input:nth-of-type(2):checked ~ .slider__controls .slider__controls-element:nth-of-type(2),
+.slider__input:nth-of-type(3):checked ~ .slider__controls .slider__controls-element:nth-of-type(3),
+.slider__input:nth-of-type(4):checked ~ .slider__controls .slider__controls-element:nth-of-type(4),
+.slider__input:nth-of-type(5):checked ~ .slider__controls .slider__controls-element:nth-of-type(5),
+.slider__input:nth-of-type(6):checked ~ .slider__controls .slider__controls-element:nth-of-type(6),
+.slider__input:nth-of-type(7):checked ~ .slider__controls .slider__controls-element:nth-of-type(7) {
     border-color: rgb(0, 0, 0, 50%);
     background: var(--color-green);
 }
